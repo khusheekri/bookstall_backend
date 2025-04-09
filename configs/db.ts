@@ -1,13 +1,15 @@
 import mongoose from "mongoose";
-import { config } from "dotenv";
+import dotenv from "dotenv";
+dotenv.config();
 
-config();
+const connectDB = async () => {
+  console.log("Loaded MONGO_URI:", process.env.MONGO_URI); // <-- Add this line
 
-const dbUrl = process.env.DB_URL as string;
+  const uri = process.env.MONGO_URI;
+  if (!uri) throw new Error("MongoDB URI not found in .env");
 
-export const connectDB = async () => {
-    mongoose.set('strictQuery', true)       
-    await mongoose.connect(dbUrl)
-}
+  await mongoose.connect(uri);
+  console.log("MongoDB connected");
+};
 
-
+export default connectDB;

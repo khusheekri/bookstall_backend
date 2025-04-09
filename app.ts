@@ -1,10 +1,13 @@
 import express from 'express';
-import { connectDB } from './configs/db';
+import connectDB from './configs/db';
 import { config } from 'dotenv';
 import bookRoute from './routes/book-route';
 import homeRoute from './routes/home-route';
 import loginRoute from './routes/login-route';
 import signupRoute from './routes/signup-route';
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 config();
 

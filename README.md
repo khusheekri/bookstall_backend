@@ -1,3 +1,18 @@
+# 📚 Bookstall Backend
+
+A simple and secure backend server for managing a book store, built using **Node.js**, **Express**, and **TypeScript**. This project supports RESTful API operations like creating, reading, updating, and deleting books. It includes authentication using API keys.
+
+---
+
+## 🚀 Features
+
+- 🔐 API Key-based Authentication
+- 📖 CRUD for Books (Create, Read, Update, Delete)
+- 📄 Typed using TypeScript
+- 🧪 Organized folder structure for controllers, routes, and middleware
+
+---
+
 ## 🚀 Setup Instructions
 
 
@@ -33,3 +48,112 @@ npm run dev
  
 
 ----
+
+## 🔐 API Authentication
+
+All protected routes require an API key to be passed in the request headers:
+
+```
+x-api-key: your_secret_api_key
+```
+
+---
+
+## 📫 API Endpoints & Sample Requests
+
+### 🔹 Sign Up
+
+- **POST** `/signup`
+```json
+{
+  "name": "khushee",
+  "email": "khushee@example.com",
+  "password": "pass123"
+}
+```
+
+---
+
+### 🔹 Login
+
+- **POST** `/login`
+```json
+{
+  "email": "khushee@example.com",
+  "password": "pass123"
+}
+```
+
+---
+
+### 🔹 Get All Books
+
+- **GET** `/api/book`
+- **Headers:** `x-api-key: your_api_key_here`
+
+---
+
+### 🔹 Get Book by ID
+
+- **GET** `/api/book/:id`
+- **Headers:** `x-api-key: your_api_key_here`
+
+---
+
+### 🔹 Add New Book
+
+- **POST** `/api/book`
+- **Headers:** `x-api-key: your_api_key_here`
+```json
+{
+  "title": "The Alchemist",
+  "author": "Paulo Coelho",
+  "price": 299
+}
+```
+
+---
+
+### 🔹 Update Book by ID
+
+- **PUT** `/api/book/:id`
+- **Headers:** `x-api-key: your_api_key_here`
+```json
+{
+  "title": "The Alchemist - Updated",
+  "price": 349
+}
+```
+
+---
+
+### 🔹 Delete Book by ID
+
+- **DELETE** `/api/book/:id`
+- **Headers:** `x-api-key: your_api_key_here`
+
+---
+
+## ✅ Assumptions & Enhancements
+
+- API key is static and set in `.env` for simplicity.
+- MongoDB is used as the primary database.
+- TypeScript ensures type safety and maintainability.
+- Middleware handles authentication for protected routes.
+- Future Enhancements:
+  - Add Swagger for documentation.
+  - Implement pagination and filtering for book lists.
+  - Add user roles and permissions.
+
+---
+
+## 🛠️ Technologies Used
+
+- Node.js
+- Express
+- TypeScript
+- MongoDB (Mongoose)
+- Dotenv
+- Postman (for testing)
+
+---

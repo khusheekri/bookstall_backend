@@ -49,13 +49,27 @@ npm run dev
 
 ----
 
-## 🔐 API Authentication
+🔐 API Authentication (JWT)
+All protected routes require a valid JWT token to be passed in the request headers:
 
-All protected routes require an API key to be passed in the request headers:
+makefile
+Copy
+Edit
+Authorization: Bearer <your_jwt_token>
+✅ How to obtain a JWT token:
+Use the /login route by providing valid credentials (email and password).
 
-```
-x-api-key: your_secret_api_key
-```
+On successful login, the API will respond with a token.
+
+Use this token for all authenticated requests by adding it to the Authorization header as shown above.
+
+Example:
+http
+Copy
+Edit
+GET /api/books
+Host: yourdomain.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6...`
 
 ---
 

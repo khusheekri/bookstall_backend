@@ -5,6 +5,7 @@
   "main": "app.ts",
   "scripts": {
     "start": "ts-node -r dotenv/config app.ts",
+    "build": "tsc",
     "dev": "npx nodemon app.ts",
     "vercel-build": "echo 'vercel-build'"
   },

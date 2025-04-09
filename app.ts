@@ -19,7 +19,7 @@ app.use(express.static('public'))
 
 //Routes
 app.use("/", homeRoute);     
-app.use("/api/products",bookRoute);    
+app.use("/api/book",bookRoute);    
 app.use("/login", loginRoute);          
 app.use("/signup", signupRoute);       
 

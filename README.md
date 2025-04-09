@@ -49,7 +49,7 @@ npm run dev
 
 ----
 
-🔐 API Authentication (JWT)
+# 🔐 API Authentication (JWT)
 All protected routes require a valid JWT token to be passed in the request headers:
 
 makefile

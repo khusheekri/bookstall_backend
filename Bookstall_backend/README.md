@@ -25,7 +25,6 @@ npm run dev
 
 ---
 
-
 # Backend Api for bookstall backend
  Routes :
  - /login : Log in with your email and password, 

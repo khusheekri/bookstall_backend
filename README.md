@@ -66,7 +66,7 @@ On successful login, the API will respond with a token.
 Use this token for all authenticated requests by adding it to the Authorization header as shown above.
 
 Example:
-http
+`http
 Copy
 Edit
 GET /api/books

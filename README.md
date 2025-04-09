@@ -56,7 +56,7 @@ makefile
 Copy
 Edit
 
-Authorization: Bearer <your_jwt_token>
+`Authorization: Bearer <your_jwt_token>`
 
 ✅ How to obtain a JWT token:
 Use the /login route by providing valid credentials (email and password).
